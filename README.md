@@ -24,38 +24,37 @@ Set a global shortcut, select a scrollable area in any app, then scroll downward
 ## Install
 
 ```bash
-brew install --cask yusuke-114/tap/longscreenshot
-```
-
-To upgrade to the latest version:
-
-```bash
-brew upgrade --cask longscreenshot
-```
-
-To uninstall (use this instead of dragging the app to the Trash):
-
-```bash
-brew uninstall --cask longscreenshot
+brew install --cask yusuke-114/tap/longscreenshot   # install
+brew upgrade --cask longscreenshot                  # upgrade
+brew uninstall --cask longscreenshot                # uninstall (don't drag it to the Trash)
 ```
 
 Or download the ZIP from [Releases](../../releases).
 
-### Install fails with `It seems there is already an App at '/Applications/LongScreenshot.app'`
+### Troubleshooting
 
-Another copy (for example the Mac App Store version) is already installed. Remove it first, or let Homebrew replace it:
+<details>
+<summary>Already installed from the Mac App Store</summary>
+
+Homebrew stops with `It seems there is already an App at '/Applications/LongScreenshot.app'`. Remove the other copy first, or let Homebrew replace it:
 
 ```bash
 brew install --cask --force yusuke-114/tap/longscreenshot
 ```
 
-### Install fails with `App source '/Applications/LongScreenshot.app' is not there`
+</details>
 
-Long Screenshot was removed by dragging it to the Trash, so Homebrew still thinks it is installed. Run this to reinstall:
+<details>
+<summary>Removed by dragging to the Trash</summary>
+
+Homebrew stops with `App source '/Applications/LongScreenshot.app' is not there`, because it still thinks the app is installed. Reinstall it:
 
 ```bash
-brew uninstall --cask --force longscreenshot && brew install --cask yusuke-114/tap/longscreenshot
+brew uninstall --cask --force longscreenshot
+brew install --cask yusuke-114/tap/longscreenshot
 ```
+
+</details>
 
 ## Quick Start
 
