@@ -23,7 +23,39 @@ Set a global shortcut, select a scrollable area in any app, then scroll downward
 
 ## Install
 
-Download the ZIP from [Releases](../../releases).
+```bash
+brew install --cask yusuke-114/tap/longscreenshot
+```
+
+To upgrade to the latest version:
+
+```bash
+brew upgrade --cask longscreenshot
+```
+
+To uninstall (use this instead of dragging the app to the Trash):
+
+```bash
+brew uninstall --cask longscreenshot
+```
+
+Or download the ZIP from [Releases](../../releases).
+
+### Install fails with `It seems there is already an App at '/Applications/LongScreenshot.app'`
+
+Another copy (for example the Mac App Store version) is already installed. Remove it first, or let Homebrew replace it:
+
+```bash
+brew install --cask --force yusuke-114/tap/longscreenshot
+```
+
+### Install fails with `App source '/Applications/LongScreenshot.app' is not there`
+
+Long Screenshot was removed by dragging it to the Trash, so Homebrew still thinks it is installed. Run this to reinstall:
+
+```bash
+brew uninstall --cask --force longscreenshot && brew install --cask yusuke-114/tap/longscreenshot
+```
 
 ## Quick Start
 
@@ -34,7 +66,7 @@ Download the ZIP from [Releases](../../releases).
 
 ## Links
 
-- [Privacy Policy](https://oneclick-inc.github.io/LongScreenShot/)
+- [Privacy Policy](https://yusuke-114.github.io/LongScreenShot/)
 - [License](LICENSE)
 
 The clothesline is adapted from [Tendedero](https://github.com/alejandrobujan/tendedero) by Alejandro Buján, used under the MIT License.
