@@ -24,12 +24,8 @@ Set a global shortcut, select a scrollable area in any app, then scroll downward
 ## Install
 
 ```bash
-brew tap yusuke-114/tap
-brew trust --cask yusuke-114/tap/longscreenshot
 brew install --cask yusuke-114/tap/longscreenshot
 ```
-
-Homebrew only loads casks from third-party taps after you trust them, so the `brew trust` step is required.
 
 To upgrade to the latest version:
 
@@ -44,14 +40,6 @@ brew uninstall --cask longscreenshot
 ```
 
 Or download the ZIP from [Releases](../../releases).
-
-### Install fails with `Refusing to load cask yusuke-114/tap/longscreenshot from untrusted tap`
-
-The tap has not been trusted yet. Trust the cask, then run the install again:
-
-```bash
-brew trust --cask yusuke-114/tap/longscreenshot
-```
 
 ### Install fails with `It seems there is already an App at '/Applications/LongScreenshot.app'`
 
